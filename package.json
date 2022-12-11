@@ -6,7 +6,7 @@
   "scripts": {
     "webpack": "node ./chore/index.js",
     "dll": "webpack --config=./chore/package/dll/webpack.dll.config.js",
-    "commit": "git add . && git cz",
+    "commit": "source ./bash/source.sh && git add . && git cz",
     "eslint": "eslint ./ --fix"
   },
   "repository": {
