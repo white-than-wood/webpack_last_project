@@ -4,7 +4,10 @@
   "description": "webpack build",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "webpack": "node ./chore/index.js",
+    "dll": "webpack --config=./chore/package/dll/webpack.dll.config.js",
+    "commit": "git add . && git cz",
+    "eslint": "eslint ./ --fix"
   },
   "repository": {
     "type": "git",
@@ -19,5 +22,72 @@
   "bugs": {
     "url": "https://github.com/white-than-wood/webpack_last_project/issues"
   },
-  "homepage": "https://github.com/white-than-wood/webpack_last_project#readme"
+  "homepage": "https://github.com/white-than-wood/webpack_last_project#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.20.5",
+    "@babel/eslint-parser": "^7.19.1",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-proposal-decorators": "^7.20.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "babel-loader": "^9.1.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "commitizen": "^4.2.6",
+    "commitlint": "^11.0.0",
+    "commitlint-config-gitmoji": "^2.2.6",
+    "conventional-changelog-gitmoji-config": "^1.4.4",
+    "css-loader": "^6.7.2",
+    "css-minimizer-webpack-plugin": "^4.2.2",
+    "cz-custom": "^0.0.2",
+    "eslint": "^8.29.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-react": "^7.31.11",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-webpack-plugin": "^3.2.0",
+    "glob": "^8.0.3",
+    "glob-all": "^3.3.1",
+    "html-webpack-plugin": "^5.5.0",
+    "husky": "^8.0.2",
+    "image-minimizer-webpack-plugin": "^3.8.1",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-svgo": "^10.0.1",
+    "inquirer": "^8.2.5",
+    "less": "^4.1.3",
+    "less-loader": "^11.1.0",
+    "lib-flexible": "^0.3.2",
+    "mini-css-extract-plugin": "^2.7.2",
+    "open": "^8.4.0",
+    "postcss-loader": "^7.0.2",
+    "postcss-preset-env": "^7.8.3",
+    "postcss-px-to-viewport": "^1.1.1",
+    "px2rem-loader": "^0.1.9",
+    "raw-loader": "^4.0.2",
+    "sass": "^1.56.2",
+    "sass-loader": "^13.2.0",
+    "shelljs": "^0.8.5",
+    "standard-version": "^9.5.0",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "core-js": "^3.26.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-custom"
+    }
+  },
+  "browserslist": [
+    "defaults"
+  ]
 }
